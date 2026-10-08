@@ -37,7 +37,8 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/task-management:latest \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/task-management:latest 
+            .
 
       - name: Push Docker image
         run: |
