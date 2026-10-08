@@ -55,10 +55,22 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           script: |
-            cd ~/backend-app/source-deploy-docker-cntt2
+            mkdir -p ~/backend-app
+            cd ~/backend-app
+            if [ ! -d "springboot_ci_cd" ]; then
+            git clone https://github.com/haibtrikkei/springboot_ci_cd.git
+            else
+            cd springboot_ci_cd
+            git pull origin main
+            fi
+  
+            cd ~/backend-app/springboot_ci_cd
+  
             docker compose pull backend
+  
             docker compose up -d backend
-            docker image prune -f
+  
+            docker compose ps
           
 
 
