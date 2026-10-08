@@ -6,7 +6,7 @@ services:
     ports:
       - "8086:8086"
     environment:
-        SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/task_management_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=asia/Ho_Chi_Minh
+        SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/task_management_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
         SPRING_DATASOURCE_USERNAME: root
         SPRING_DATASOURCE_PASSWORD: 1234$
     depends_on:
