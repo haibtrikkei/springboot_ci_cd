@@ -1,10 +1,12 @@
 services:
   backend:
-    image: haibtrikkei/task-management:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: backend-app
     restart: always
     ports:
-      - "8000:8000"
+      - "8086:8086"
     environment:
         SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/task_management_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=asia/Ho_Chi_Minh
         SPRING_DATASOURCE_USERNAME: root
