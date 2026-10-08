@@ -55,7 +55,7 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           script: |
-            cd ~/backend-app/HN_K24_CNTT1_DEVOPS_SourceBuild_Docker
+            cd ~/backend-app/source-deploy-docker-cntt2
             docker compose pull backend
             docker compose up -d backend
             docker image prune -f
