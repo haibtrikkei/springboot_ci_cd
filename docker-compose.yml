@@ -1,6 +1,6 @@
 services:
   backend:
-    image: haibtrikkei/task-management-backend:latest
+    image: haibtrikkei/springboot_ci_cd:latest
     container_name: backend-app
     restart: always
     ports:
